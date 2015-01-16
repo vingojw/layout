@@ -1,0 +1,101 @@
+/*基于base.css的模块样式*/
+
+/*块标题头部样式
+sty1  定宽
+sty2  还是定宽
+sty3  线跟跟着文字走
+
+*/
+.sty1{
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ecedee;
+  margin-bottom: 20px;
+  line-height: 28px;
+}
+.sty1:before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 56px;
+  background-color: #2f3c4e;
+  bottom: -2px;
+  left: 0;
+}
+/*sty2        */
+.sty2{
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0,0,0,0);
+  margin-bottom: 20px;
+  line-height: 28px;
+}
+.sty2:before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  background-color: #2f3c4e;
+  bottom: -2px;
+  left: 0;
+}
+.sty2 .block-box-title-more{
+  float: right;
+  padding: 0px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+  border: 1px solid #ecedee;
+  line-height:26px;
+}
+.sty2 .block-box-title-more:hover{
+  background: #e74c3c;
+}
+
+/*sty3        */
+
+.sty3{
+  border-bottom: 2px solid #ecedee;
+  margin-bottom: 20px;
+  line-height: 28px;
+}
+.sty3 span{
+  display:inline-block;
+  padding-bottom:10px;
+  position:relative;
+}
+.sty3 span:before{
+  height:2px;
+  width:100%;
+  content:'';
+  background:red;
+  position:absolute;
+  bottom:-2px;
+}
+.sty3 .block-box-title-more{
+  float: right;
+  padding: 0px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+  border: 1px solid #ecedee;
+  line-height:26px;
+}
+.sty3 .block-box-title-more:hover{
+  background: #e74c3c;
+}/*块标题头部样式-end*/
+
+/*自定义媒体对象*/
+.custom.block-box-img{
+  margin-right:10px;
+}
+.custom.block-box-content{
+  padding-left:12px;
+  border-left:1px solid #e5e5e5;
+}
+.custom.block-box-content a{
+  font-size:15px;
+}
+.custom.block-box-content span{
+  font-size:12px;
+  display:block;
+  margin:10px 0;
+}/*自定义媒体对象-end*/

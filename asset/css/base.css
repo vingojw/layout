@@ -1,0 +1,27 @@
+/*基本样式*/
+  /*导航*/
+  .nav{overflow:hidden;}
+  .nav li{ float:left;}  
+
+  /*块标题*/
+  .block-box-title{
+    position: relative;
+  }
+  .block-box-title-more{
+    float:right;
+  }
+
+  /*媒体对象*/
+  .block-box-img{
+    float:left;
+  }
+  .block-box-content{
+    overflow:hidden;
+  }
+
+  /*列表*/
+
+
+
+
+/*基本样式结束*/
