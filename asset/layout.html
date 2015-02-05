@@ -3,10 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>布局生成-来自：http://www.twinsenliang.net/skill/20081109.html</title>
+	<style>
+		body{
+			margin-bottom: 20px;
+		}
+		#grid_div a{
+			color:#BABABA;
+		}
+		#grid_div a:hover{
+			color:#FB8C00;
+		}
+		a{
+			color:#3F51B5;
+		}
+	</style>
 </head>
 <body>
-
-	
 	<div id="grid_div"></div>
 	<form id="form1" method="get" action="#" onsubmit="return false;" class="center">
 	<p>
@@ -37,7 +49,7 @@
 				for (var mn=1;mn<mw;mn++){
 					if ((mx*mn+(mn-1)*my)==mw){
 						grid_text="单元格宽度:"+mx+"px；";
-						grid_text+="可存在单元格个数:"+mn+"个。"+mn+" 栅格<br />";
+grid_text+="可存在单元格个数:"+mn+"个。"+mn+" 栅格  <a class='view' target='_blank' href='http://grids.herokuapp.com/grid?column_width=" + mx + "&column_amount=" + mn + "&gutter_width=" + my + "'>查看样式效果(单位:px)</a>&nbsp;<a class='view' target='_blank' href='http://grids.herokuapp.com/fluid_grid?column_width=" + mx + "&column_amount=" + mn + "&gutter_width=" + my + "'>查看自适应样式效果(单位:百分比%)</a>";
 						 
 							grid_text+='<div style="width:'+mw+'px;border:1px solid #999999;background:#CCCCCC;overflow:auto;margin:10px;" />';
 						 
