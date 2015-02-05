@@ -13,13 +13,46 @@
 
   /*媒体对象*/
   .block-box-img{
-    float:left;
+    
   }
   .block-box-content{
     overflow:hidden;
   }
 
   /*列表*/
+  .list{
+    overflow:hidden;
+  }
+  .list li{
+    overflow:hidden;
+    width:100%;
+  }
+  .list span{
+    float:right;
+  }
+  .list a{
+    display:block;
+    white-space:nowrap; 
+    text-overflow:ellipsis;
+    overflow:hidden;
+  }
+
+  /*项目列表*/
+  .item-box{
+    overflow:hidden;
+  }
+  .item-list-2 li{
+    width:50%;
+  }
+  .item-list-3 li{
+    width:33.333%;
+  }
+  .item-list-4 li{
+    width:25%;
+  }
+  .item-list-5 li{
+    width:20%;
+  }
 
 
 

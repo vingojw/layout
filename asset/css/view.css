@@ -86,6 +86,7 @@ sty3  线跟跟着文字走
 /*自定义媒体对象*/
 .custom.block-box-img{
   margin-right:10px;
+  float:left;
 }
 .custom.block-box-content{
   padding-left:12px;
@@ -99,3 +100,75 @@ sty3  线跟跟着文字走
   display:block;
   margin:10px 0;
 }/*自定义媒体对象-end*/
+
+
+/*项目列表*/
+/*第一种*/
+ul.item-list1{
+  margin-right:-10px;
+  margin-bottom:-10px;
+  outline:1px solid red;
+  overflow:hidden;
+}
+.item-list1 li {
+  float:left;
+  background:#345;
+  overflow:hidden;
+}
+.item-list1 div{
+  margin:0 10px 10px 0;
+  background:#fff;
+  height:2em;
+  overflow:hidden;
+}
+/*第二种*/
+ul.item-list2{
+  overflow:hidden;
+}
+.item-list2 li {
+  float:left;
+  overflow:hidden;
+}
+.item-list2 div{
+  margin:5px;
+  background:#fff;
+  height:2em;
+  overflow:hidden;
+}
+/*这里加了一层div*/
+.item-box div.item-list2Box{
+  background:#345;
+  padding:5px;
+}
+/*第三种*/
+.item-list3 li {
+  float:left;
+  overflow:hidden;
+  background:#345;
+}
+.item-list3 .outer{
+  padding-top:100%;
+  background:#f60;
+  position:relative;
+  border-radius:50%;
+  
+}
+.item-list3 .inner:before{
+content: '';
+display: inline-block;
+vertical-align: middle;
+height: 100%;
+}
+.item-list3 .inner{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+ 
+  text-align:center;
+}
+.item-list3 .inner span{
+  vertical-align:middle;
+  display:inline-block;
+}/*项目列表-end*/

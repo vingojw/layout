@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>布局生成-来自：http://www.twinsenliang.net/skill/20081109.html</title>
+</head>
+<body>
+
+	
+	<div id="grid_div"></div>
+	<form id="form1" method="get" action="#" onsubmit="return false;" class="center">
+	<p>
+		<label>
+			网格总宽：<input name="textfield" type="text" class="text" id="grid_width" value="950" />
+		</label>
+		<label>
+			网格间隙：<input name="textfield" type="text" class="text" id="grid_space" value="10" />
+		</label><br /><br />
+		<label>
+		<input onclick="Grid($('grid_width').value,$('grid_space').value);return false;" type="submit" name="button" id="button" value="Submit" />
+		</label>
+		<label>
+		<input type="reset" name="button2" id="button2" value="Reset" />
+		</label>
+		<a href="http://www.twinsenliang.net/skill/20081109.html">原文地址</a>
+	</p>
+</form>
+	<script type="text/javascript">
+	// <![CDATA[
+
+	function $(Element){
+		return document.getElementById(Element);
+	};
+	function Grid(mw,my){
+		$('grid_div').innerHTML="<em>网格间距为"+my+"时存有网格划分方式如下：</em><br />";
+			for (var mx=60;mx<mw;mx++){
+				for (var mn=1;mn<mw;mn++){
+					if ((mx*mn+(mn-1)*my)==mw){
+						grid_text="单元格宽度:"+mx+"px；";
+						grid_text+="可存在单元格个数:"+mn+"个。"+mn+" 栅格<br />";
+						 
+							grid_text+='<div style="width:'+mw+'px;border:1px solid #999999;background:#CCCCCC;overflow:auto;margin:10px;" />';
+						 
+						for (var i=1;i<mn;i++){
+							grid_text+='<div style="background:#F1F1F1;width:'+mx+'px;margin-right:'+my+'px;float:left;">'+i+'</div>';
+						}
+						grid_text+='<div style="background:#F1F1F1;width:'+mx+'px;float:left;">'+i+'</div>';
+						grid_text+='</div>';
+						$('grid_div').innerHTML=$('grid_div').innerHTML+grid_text;
+					}
+				}
+			}
+	}
+	// ]]>
+</script>
+
+
+ <div class="block">
+    <p><label for="">页面宽度W:<input id="W" type="text" value="950"></label><label for="">间距i:</label><input id="I" value="10" type="text"></p>
+    <label for="">多少栅格？<input id ="N" type="text" value="12"></label>
+    <p id="result"></p>
+  </div>
+
+  <script>
+var _W = document.getElementById('W');
+var _I = document.getElementById('I');
+var _N = document.getElementById('N');
+var res = document.getElementById('result');
+
+_W.onkeyup = function(){
+  res.innerHTML = go();
+};
+_I.onkeyup = function(){
+  res.innerHTML = go();
+};
+_N.onkeyup = function(){
+  res.innerHTML = go(); 
+};
+
+/*  
+  W ＝ a * n +（n-1）*i
+  因为a + i = A  
+  所以A * n - i = W
+  n 是栅格，比如你要 24栅格(i) 宽度950(W) 间距10(i)那么
+  可以得出
+  A＝（950+10）/24 = 40 
+  栅格系统为：40 * n - i = W 
+  通过修改 A 和 i 的值可以衍生出任何的一种栅格系统
+*/
+function go(W,I,N){
+  var W = W || ~~_W.value;
+  var i = I || ~~_I.value; 
+  var n = N || ~~_N.value;
+  this.A = (W + i) / n; 
+  return "栅格系统"+this.A + "*n-"+i + "=" + W;
+}
+res.innerHTML = go();
+    
+  </script>
+
+
+<p>
+	<a target="_blank" href="http://jsbin.com/fipigotujo/1/edit?html,output">还有自适应的，就是把具体数值换算成百分比</a>
+</p>
+<p>
+	<a target="_blank" href="http://www.w3cplus.com/css/css-layout-with-960-grids">参考</a>
+</p>
+</body>
+</html>
