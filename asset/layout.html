@@ -110,8 +110,8 @@ function go(W,I,N){
 	fun = new Function("w", "return (~~w+" + i + ")/" +this.A);
 	fun1 = new Function("n", "return " + this.A + "*n-" + i);
 	var arr = [];
-	for (var i = 1; i <= n; i++) {
-		arr.push("grid_" + i + "--" +fun1(i)+"px");
+	for (var _i = 1; _i <= n; _i++) {
+		arr.push("grid_" + _i + "--" +fun1(_i)+"px");
 	};
 	res1.innerHTML = arr.join('<br/>');
 	var sss = '&nbsp;&nbsp;&nbsp;&nbsp;当宽度为：<input type="text" onkeyup="ss.call(this);"> px时 n 为 <span id="nGrid"></span>';
@@ -129,6 +129,7 @@ function ss(){
 	},250);
 }
   </script>
+
 <p>
 	<a target="_blank" href="http://jsbin.com/fipigotujo/1/edit?html,output">还有自适应的，就是把具体数值换算成百分比</a>
 </p>
